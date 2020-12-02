@@ -2,8 +2,8 @@ import re
 
 with open('day_2_puzzle_1_input.txt') as f:
     raw_data = f.read().split('\n')
-    rules = [(line.split(' ')[0], line.split(' ')[1].split(':')[0]) for line in raw_data]
-    passwords = [line.split(':')[1] for line in raw_data]
+    rules = [(line.split(' ')[0].strip(), line.split(' ')[1].split(':')[0].strip()) for line in raw_data]
+    passwords = [line.split(':')[1].strip() for line in raw_data]
     num_valid_passwords = 0
 
     for i in range(0, len(rules)):
