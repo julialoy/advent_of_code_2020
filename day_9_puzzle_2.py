@@ -6,6 +6,8 @@ with open('day_9_puzzle_1_input.txt') as f:
     cont_num_lst = []
     set_found = False
     for i in range(0, len(num_lst)-1):
+        if set_found:
+            break
         if num_lst[i] == target:
             break
         cont_num_lst.append(num_lst[i])
@@ -19,4 +21,3 @@ with open('day_9_puzzle_1_input.txt') as f:
                 break
         if not set_found:
             cont_num_lst = []
-
